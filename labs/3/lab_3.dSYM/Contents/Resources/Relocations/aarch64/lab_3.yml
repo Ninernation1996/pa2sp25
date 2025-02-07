@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/craiglanghorst/pa2sp25/labs/3/lab_3'
+relocations:     []
+...
