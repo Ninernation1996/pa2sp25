@@ -57,9 +57,12 @@ int main() {
 }
 
 // CODE HERE -- FUNCTION DEFINITION
+<<<<<<< HEAD
 bool ProcessFile(string filename) {
   
 }
+=======
+>>>>>>> 968f8143fd25bb061c3bc39efa8271b873b35e5f
 
 // For testing (DO NOT ALTER)
 void UnitTest() {
