@@ -34,6 +34,7 @@ void Hello();
  * Display message to stdout (no newline character after)
  */
 // CODE HERE (FUNCTION PROTOTYPE)
+void PrintMessage(string const &message);
 
 /*
  * function name: GetAnswer
@@ -44,6 +45,7 @@ void Hello();
  * Return the value 42
  */
 // CODE HERE (FUNCTION PROTOTYPE)
+int GetAnswer();
 
 /*
  * function name: FindLarger
@@ -55,7 +57,7 @@ void Hello();
  * if the values are equivalent.
  */
 // CODE HERE (FUNCTION PROTOTYPE)
-
+int FindLarger(int const &a, int const &b);
 /*
  * function name: GetStats
  * parameters: string (const call-by-reference), int (call-by-reference),
@@ -69,6 +71,7 @@ void Hello();
  * characters in the first parameter (string)
  */
 // CODE HERE (FUNCTION PROTOTYPE)
+int GetStats(string const &message, int &upper, int &lower);
 
 /*
  * function name: BuildMessage
@@ -83,6 +86,8 @@ void Hello();
  * "Message: empty".
  */
 // CODE HERE (FUNCTION PROTOTYPE)
+string BuildMessage(string const &message = "", bool const &a = false); 
+
 
 
 // For testing (DO NOT ALTER)
@@ -107,6 +112,41 @@ int main() {
 void Hello() {
   cout << "Hello world!";
 }
+void PrintMessage(string const &message) {
+  cout << message;
+
+}
+int GetAnswer() {
+  return 42;
+
+}
+int FindLarger(int const &a, int const &b) {
+  if (a > b) {
+    return a;
+  } else if (a == b) {
+    return a, b;
+  } else {
+    return b;
+  }
+
+}
+int GetStats(string const &message, int &upper, int &lower) {
+    for (int i = 0; i < message.size(); i++) {
+      if (isupper(message[i])) {
+      upper++;
+    } else if (islower(message[i])) {
+      lower++;
+    }
+  }
+  return message.length(), upper, lower;
+
+}
+string BuildMessage(string const &message, bool const &a) {
+  return message;
+}
+
+
+
 
 // For testing (DO NOT ALTER)
 void UnitTest() {

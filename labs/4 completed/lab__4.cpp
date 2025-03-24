@@ -1,5 +1,5 @@
 /*
- * Name        : lab_4.cpp
+ * Craig Langhorst        : lab_4.cpp
  * Author      : FILL IN
  * Description : Use branching statements, looping statements and string and
  *               character functions to complete the functions

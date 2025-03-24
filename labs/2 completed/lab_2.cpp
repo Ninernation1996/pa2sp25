@@ -89,7 +89,7 @@ double LaunchHumanCannonball(double initial_velocity, double launch_angle) {
   // (1) Convert launch_angle from degrees to radians
   //     [radian_angle = degree_launch_angle * (kPI/180)]
   // CODE HERE
-  double radian_angle = degree_launch_angle * (kPI/180);
+  double radian_angle = launch_angle * (kPI/180);
 
   // (2) Compute final horizontal/x velocity
   //     [x_velocity = initial_velocity * cos(radian_angle)]

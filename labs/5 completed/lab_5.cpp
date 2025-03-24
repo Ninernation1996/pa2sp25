@@ -1,5 +1,5 @@
 /*
- * Name        : lab_5.cpp
+ * Craig Langhorst      : lab_5.cpp
  * Author      : FILL IN
  * Description : Working with Arrays
  */
@@ -88,6 +88,58 @@ int main() {
 
 // CODE HERE (FUNCTION DEFINITIONS)
 
+     string PrepareForDisplay(int values[], int size, char separator)
+     {   
+          stringstream ss;
+          for (int i = 0; i < size; i++) {
+          
+           ss << values[i];
+           if (i < size - 1) {
+               ss << separator;
+           }
+          }
+        
+          return ss.str();
+          
+     }
+     bool HasValue(int values[], int size, int value)
+     {
+         for (int i = 0; i < size; i++) {
+          if (values[i] == value){
+               return true;
+          } 
+         
+         }
+         
+         return false;
+     }
+int ValueAt(int values[], int size, int index, bool& error) {
+     if (index < 0 || index >= size) {
+          error = true;
+          return 0;
+     }
+     error = false;
+     return values[index];
+}
+int Sum(int values[], int size) {
+     int new_value = 0;
+      for (int i = 0; i < size; i++) {
+          new_value = values[i] + new_value;
+          
+     }
+     return new_value;
+     
+}
+bool SwapValues(int values[], int size, int index1, int index2) {
+     if (index1 >= 0 && index1 < size && index2 >= 0 && index2 < size) {
+          int temp_index = values[index1];
+          values[index1] = values[index2];
+          values[index2] = temp_index;
+          return true;
+     } else {
+          return false;
+     }
+}
 
 // For testing (DO NOT ALTER)
 void UnitTest() {
